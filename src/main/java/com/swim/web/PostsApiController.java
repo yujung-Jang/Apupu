@@ -1,6 +1,7 @@
 package com.swim.web;
 
 import com.swim.service.posts.PostsService;
+import com.swim.web.dto.PostsResponseDto;
 import com.swim.web.dto.PostsSaveRequestDto;
 import com.swim.web.dto.PostsUpdateRequestDto;
 import lombok.RequiredArgsConstructor;
@@ -26,5 +27,10 @@ public class PostsApiController {
     public Long delete(@PathVariable Long id) {
         postsService.delete(id);
         return id;
+    }
+
+    @GetMapping("api/v1/posts/{id}")
+    public PostsResponseDto findById(@PathVariable Long id) {
+        return postsService.findById(id);
     }
 }
