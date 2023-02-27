@@ -14,7 +14,7 @@ on:
     branches: [master]
     
 env:
-  S3_BUCKET_NAME: apupu.build
+  S3_BUCKET_NAME: apupu-build
 
 jobs:
   build:
