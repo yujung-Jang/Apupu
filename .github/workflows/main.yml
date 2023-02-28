@@ -64,4 +64,7 @@ jobs:
 
     # 배포 그룹으로 애플리케이션 전송
     - name: Code Deploy
-      run: aws deploy create-deployment --application-name $CODE_DEPLOY_APP_NAME --deployment-config-name CodeDeployDefault.AllAtOnce --deployment-group-name $CODE_DEPLOY_GROUP_NAME --s3-location bucket=$S3_BUCKET_NAME,bundleType=zip,key=$PROJECT_NAME/$PROJECT_NAME.zip
+      run: aws deploy create-deployment --application-name $CODE_DEPLOY_APP_NAME
+          --deployment-config-name CodeDeployDefault.AllAtOnce
+          --deployment-group-name $CODE_DEPLOY_GROUP_NAME
+          --s3-location bucket=$S3_BUCKET_NAME, bundleType=zip, key=practice-deploy.zip
