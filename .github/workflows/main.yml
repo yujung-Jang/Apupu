@@ -67,4 +67,4 @@ jobs:
       run: aws deploy create-deployment --application-name $CODE_DEPLOY_APP_NAME
           --deployment-config-name CodeDeployDefault.AllAtOnce
           --deployment-group-name $CODE_DEPLOY_GROUP_NAME
-          --s3-location bucket=$S3_BUCKET_NAME, bundleType=zip, key=practice-deploy.zip
+          --s3-location bucket=$S3_BUCKET_NAME, bundleType=zip, key=$S3_BUCKET_NAME/practice-deploy.zip
